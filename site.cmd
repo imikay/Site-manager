@@ -1,2 +1,2 @@
 @echo off
-php.exe "E:\php-commands\sites.php" %*
+php.exe "E:\php-commands\site.php" %*
