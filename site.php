@@ -108,18 +108,27 @@ switch ($argv[1])
     
     $port = 8080;
     
-    $index = array_search($name, $serverNames);
+    $index1 = array_search($name, $serverNames);
     
-    if ($index !== false)
+    if ($index1 !== false)
     {
-      $port = $ports[$index];
+      $port = $ports[$index1];
+      $host = $name;
     }
     else
     {
-      exit("\n Site not found \n");
+      $index2 = array_search($name, $ports);
+      
+      if ($index2 === false)
+      {
+        exit("\n Site not found \n");
+      }
+      
+      $port = $name;
+      $host = $serverNames[$index2];
     }
     
-    system('explorer.exe http://'.$name.':'.$port);
+    system('explorer.exe http://'.$host.':'.$port);
   break;
   
   default:
