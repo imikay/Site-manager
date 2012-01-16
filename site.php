@@ -103,6 +103,25 @@ switch ($argv[1])
     echo 'Not implemented';
   break;
   
+  case 'open':
+    $name = trim($argv[2]) ? strtolower(trim($argv[2])) : 'localhost';
+    
+    $port = 8080;
+    
+    $index = array_search($name, $serverNames);
+    
+    if ($index !== false)
+    {
+      $port = $ports[$index];
+    }
+    else
+    {
+      exit("\n Site not found \n");
+    }
+    
+    system('explorer.exe http://'.$name.':'.$port);
+  break;
+  
   default:
     echo 'Please specify a action.';
   break;
