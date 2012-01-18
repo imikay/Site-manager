@@ -30,7 +30,9 @@ Create a new site config for Apache.
       list                    -- list all sites
       new                     -- create new site
       rm                      -- remove a site
-      
+      open                    -- open a site by name or port
+      find                    -- find one site by name or port
+
 DOC;
 
   echo $doc;
