@@ -1,8 +1,5 @@
 <?php
-$apacheConfigPath = 'D:/Program Files/wamp2/bin/apache/Apache2.2.17/conf/sites-enabled/';
-$template = __DIR__.'/config-template.conf';
-$siteDir = 'E:/sites/';
-$hostFile = 'C:/Windows/System32/drivers/etc/HOSTS';
+require_once __DIR__.'/config.php';
 
 $fileNames = array_filter(array_filter(scandir($apacheConfigPath)), 
                           function ($v) use ($apacheConfigPath)
