@@ -134,7 +134,7 @@ switch ($argv[1])
   break;
   
   default:
-    echo 'Please specify a action.';
+    echo 'Please specify an action.';
   break;
 }
 
