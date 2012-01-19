@@ -13,22 +13,22 @@ Commands:
 ---------------
 List all virtual hosts with port and server name:
 
-    site list
+    $ site list
     
 Create a new virtual host:
 
-    site new serverName [port] 
+    $ site new serverName [port] 
 
 Remove a virtual host(Not implemented)
 
-    site rm serverName 
+    $ site rm serverName 
 
 Find a virtual host:
 
-    site find serverName or port
+    $ site find serverName or port
     
 Open a virtual host in browser:
 
-    site open serverName or port
+    $ site open serverName or port
     
     
