@@ -11,8 +11,24 @@ Put the site.cmd in you system(Windows) path, and run the command [site].
 
 Commands:
 ---------------
-site list: list all virtual hosts with port and server name.
+List all virtual hosts with port and server name:
 
-site new serverName [port]: create a new virtual host.
+    site list
+    
+Create a new virtual host:
 
-site rm serverName: remove the virtual host(Not implemented).
+    site new serverName [port] 
+
+Remove a virtual host(Not implemented)
+
+    site rm serverName 
+
+Find a virtual host:
+
+    site find serverName or port
+    
+Open a virtual host in browser:
+
+    site open serverName or port
+    
+    
