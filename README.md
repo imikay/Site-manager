@@ -1,4 +1,4 @@
-Site manager: A PHP script that can create and delete virtual host
+Site manager: A PHP script that can manage virtual host
 configs for you.
 
 We asume that all you virtual host config files are 
@@ -12,5 +12,7 @@ Put the site.cmd in you system(Windows) path, and run the command [site].
 Commands:
 ---------------
 site list: list all virtual hosts with port and server name.
+
 site new serverName [port]: create a new virtual host.
+
 site rm serverName: remove the virtual host(Not implemented).
