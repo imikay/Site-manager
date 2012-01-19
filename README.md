@@ -1,8 +1,8 @@
 Site manager: A PHP script that can manage virtual host
 configs for you.
 
-We asume that all you virtual host config files are 
-all named with this pattern: [port]-[serverName].conf, eg.80-example.com.conf.
+We assume that all your virtual host config files are 
+named with this pattern: [port]-[serverName].conf, eg.80-example.com.conf.
 
 
 Usage:
