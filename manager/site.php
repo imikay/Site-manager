@@ -1,6 +1,28 @@
 <?php
 require_once __DIR__.'/config.php';
 
+if (!is_dir($apacheConfigPath) || !is_readable($apacheConfigPath))
+{
+  echo "Apache config path $apacheConfigPath does not exist or is not readable \n";
+  echo "Create it now ? [yes|no]: ";
+  
+  $choice = strtolower(trim(fread(STDIN, 120)));
+  
+  if ($choice == 'yes')
+  {
+    $made = mkdir($apacheConfigPath, '0777', true);
+    
+    if (!$made)
+    {
+      exit("\nCreate directory failed!\n");
+    }
+  }
+  else
+  {
+    exit();
+  }    
+}
+
 $fileNames = array_filter(array_filter(scandir($apacheConfigPath)), 
                           function ($v) use ($apacheConfigPath)
                           { 
