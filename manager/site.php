@@ -31,8 +31,17 @@ $fileNames = array_filter(array_filter(scandir($apacheConfigPath)),
                         );
                         
 $ports = array_map(function ($fileName){ $fileName = explode('-', $fileName); return $fileName[0]; }, $fileNames);
-$serverNames = array_map(function ($fileName){ $fileName = explode('-', rtrim($fileName, '.conf'), 2); return $fileName[1]; }, $fileNames);
-
+$serverNames = array_map(
+                function ($fileName)
+                { 
+                  $fileName = explode('.', $fileName, -1);
+                  
+                  $fileName = explode('-', $fileName[0], 2);                                       
+                  
+                  return $fileName[1]; 
+                },
+                $fileNames);
+                
                         
 asort($ports);
 
